@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B18D3A71DBE4D01003ECD49 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B18D3A61DBE4D01003ECD49 /* main.cpp */; };
+		3B18D3AF1DBE4DCA003ECD49 /* ThreadPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B18D3AD1DBE4DCA003ECD49 /* ThreadPool.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		3B18D3A31DBE4D01003ECD49 /* ThreadPoolSample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ThreadPoolSample; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B18D3A61DBE4D01003ECD49 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3B18D3AD1DBE4DCA003ECD49 /* ThreadPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ThreadPool.cpp; sourceTree = "<group>"; };
+		3B18D3AE1DBE4DCA003ECD49 /* ThreadPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadPool.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				3B18D3A61DBE4D01003ECD49 /* main.cpp */,
+				3B18D3AD1DBE4DCA003ECD49 /* ThreadPool.cpp */,
+				3B18D3AE1DBE4DCA003ECD49 /* ThreadPool.h */,
 			);
 			path = ThreadPoolSample;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B18D3A71DBE4D01003ECD49 /* main.cpp in Sources */,
+				3B18D3AF1DBE4DCA003ECD49 /* ThreadPool.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +222,7 @@
 		3B18D3AB1DBE4D01003ECD49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -223,6 +230,7 @@
 		3B18D3AC1DBE4D01003ECD49 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

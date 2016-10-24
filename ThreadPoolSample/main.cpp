@@ -2,14 +2,26 @@
 //  main.cpp
 //  ThreadPoolSample
 //
-//  Created by タカ on 2016/10/24.
-//  Copyright © 2016年 タカ. All rights reserved.
-//
+
 
 #include <iostream>
+#include <mutex>
+#include "ThreadPool.h"
 
-int main(int argc, const char * argv[]) {
-  // insert code here...
+static std::mutex mtx;
+
+int main(int argc, const char * argv[])
+{
+  ThreadPool::get()->initialize(4);
+
+  for(int i = 0; i < 100; ++i)
+  {
+    ThreadPool::get()->enqueue([=]{
+      std::lock_guard<std::mutex> lock(mtx);
+      std::cout << "test=" << i << std::endl;
+    });
+  }
+  
   std::cout << "Hello, World!\n";
-    return 0;
+  return 0;
 }
